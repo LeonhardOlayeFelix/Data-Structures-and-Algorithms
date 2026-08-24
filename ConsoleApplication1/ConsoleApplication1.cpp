@@ -4,16 +4,16 @@
 #include <string>
 #include <ctype.h>
 #include <algorithm>
-#include "Sorting/MergeSort.h"
+#include "Sorting/QuickSort.h"
 
 
 int main() {
 
-	std::vector<int> v = { 0,5,7,8,6,3,4,2,1,9 };
+	std::vector<int> v = { 0,5,7,8,6,3,4,2,1,9, 10 };
 
-	std::vector<int> sorted = MergeSort::sort(v);
+	QuickSort::sort(v);
 
-	for (int value : sorted) {
+	for (int value : v) {
 		std::cout << value << ", ";
 	}
 

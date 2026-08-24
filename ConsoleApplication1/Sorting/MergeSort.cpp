@@ -2,37 +2,33 @@
 
 std::vector<int> MergeSort::sort(const std::vector<int> vec)
 {
-	if (vec.size() == 1)
+	if (vec.size() == 1) 
 		return vec;
 
 	std::vector<int> left(vec.begin(), vec.begin() + vec.size() / 2);
 	std::vector<int> right(vec.begin() + vec.size() / 2, vec.end());
 
-	std::vector<int> L = sort(left);
-	std::vector<int> R = sort(right);
-
-	return merge(L, R);
+	return merge(sort(left), sort(right));
 }
 
-std::vector<int> MergeSort::merge(const std::vector<int> left, const std::vector<int> right) {
+std::vector<int> MergeSort::merge(const std::vector<int> left, const std::vector<int> right)
+{
 	std::vector<int> res(left.size() + right.size());
 
-
-	int leftPtr = 0;
-	int rightPtr = 0;
+	int l = 0;
+	int r = 0;
 
 	int index = 0;
-
-	while (leftPtr < left.size() && rightPtr < right.size()) {
-		res[index++] = left[leftPtr] < right[rightPtr] ? left[leftPtr++] : right[rightPtr++];
+	while (l < left.size() && r < right.size()) {
+		res[index++] = left[l] < right[r] ? left[l++] : right[r++];
 	}
 
-	while (leftPtr < left.size()) {
-		res[index++] = left[leftPtr++];
+	while (l < left.size()) {
+		res[index++] = left[l++];
 	}
 
-	while (rightPtr < right.size()) {
-		res[index++] = right[rightPtr++];
+	while (r < right.size()) {
+		res[index++] = right[r++];
 	}
 
 	return res;

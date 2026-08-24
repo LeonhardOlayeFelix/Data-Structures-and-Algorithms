@@ -21,9 +21,15 @@
     <ClCompile Include="Sorting\MergeSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sorting\QuickSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sorting\MergeSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorting\QuickSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
