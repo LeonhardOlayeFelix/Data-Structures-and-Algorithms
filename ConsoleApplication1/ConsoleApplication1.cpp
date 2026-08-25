@@ -14,7 +14,7 @@ int main() {
 
 	std::vector<int> p = MergeSort::sort(v);
 
-	int res = BinarySearch::search(p, 9);
+	int res = BinarySearch::search(p, 40);
 
 
 	for (const int& num : p) {
