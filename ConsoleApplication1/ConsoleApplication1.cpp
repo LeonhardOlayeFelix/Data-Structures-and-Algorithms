@@ -4,23 +4,23 @@
 #include <string>
 #include <ctype.h>
 #include <algorithm>
-#include "Sorting and Searching/BinarySearch.h"
-#include "Sorting and Searching/MergeSort.h"
+#include "Linked Lists/SinglyLinkedList.h"
 
 
 int main() {
 
 	std::vector<int> v = { 0,5,7,8,6,6,3,4,2,1,9, 10 };
 
-	std::vector<int> p = MergeSort::sort(v);
+	SinglyLinkedList list;
+	list.append(4);
+	list.append(5);
+	list.append(6);
+	list.insert(7, 5);
 
-	int res = BinarySearch::search(p, 40);
+	const Node1* current = list.Head();
 
-
-	for (const int& num : p) {
-		std::cout << num << ", ";
+	while (current != nullptr) {
+		std::cout << current->Data();
+		current = current->Next;
 	}
-
-	std::cout << '\n' << res << std::endl;
-
 }

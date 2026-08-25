@@ -139,6 +139,8 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Linked Lists\Node1.cpp" />
+    <ClCompile Include="Linked Lists\SinglyLinkedList.cpp" />
     <ClCompile Include="Sorting and Searching\BinarySearch.cpp" />
     <ClCompile Include="Sorting and Searching\InsertionSort.cpp" />
     <ClCompile Include="Sorting and Searching\BubbleSort.cpp" />
@@ -147,6 +149,8 @@
     <ClCompile Include="Sorting and Searching\MergeSort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Linked Lists\Node1.h" />
+    <ClInclude Include="Linked Lists\SinglyLinkedList.h" />
     <ClInclude Include="Sorting and Searching\BinarySearch.h" />
     <ClInclude Include="Sorting and Searching\InsertionSort.h" />
     <ClInclude Include="Sorting and Searching\BubbleSort.h" />
