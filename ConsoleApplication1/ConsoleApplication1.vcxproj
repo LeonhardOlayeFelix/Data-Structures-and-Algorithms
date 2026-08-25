@@ -139,17 +139,19 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Sorting\InsertionSort.cpp" />
-    <ClCompile Include="Sorting\BubbleSort.cpp" />
+    <ClCompile Include="Sorting and Searching\BinarySearch.cpp" />
+    <ClCompile Include="Sorting and Searching\InsertionSort.cpp" />
+    <ClCompile Include="Sorting and Searching\BubbleSort.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="Sorting\QuickSort.cpp" />
-    <ClCompile Include="Sorting\MergeSort.cpp" />
+    <ClCompile Include="Sorting and Searching\QuickSort.cpp" />
+    <ClCompile Include="Sorting and Searching\MergeSort.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sorting\InsertionSort.h" />
-    <ClInclude Include="Sorting\BubbleSort.h" />
-    <ClInclude Include="Sorting\QuickSort.h" />
-    <ClInclude Include="Sorting\MergeSort.h" />
+    <ClInclude Include="Sorting and Searching\BinarySearch.h" />
+    <ClInclude Include="Sorting and Searching\InsertionSort.h" />
+    <ClInclude Include="Sorting and Searching\BubbleSort.h" />
+    <ClInclude Include="Sorting and Searching\QuickSort.h" />
+    <ClInclude Include="Sorting and Searching\MergeSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

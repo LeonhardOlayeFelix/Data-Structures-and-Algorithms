@@ -4,17 +4,23 @@
 #include <string>
 #include <ctype.h>
 #include <algorithm>
-#include "Sorting/InsertionSort.h"
+#include "Sorting and Searching/BinarySearch.h"
+#include "Sorting and Searching/MergeSort.h"
 
 
 int main() {
 
 	std::vector<int> v = { 0,5,7,8,6,6,3,4,2,1,9, 10 };
 
-	InsertionSort::sort(v);
+	std::vector<int> p = MergeSort::sort(v);
 
-	for (int value : v) {
-		std::cout << value << ", ";
+	int res = BinarySearch::search(p, 9);
+
+
+	for (const int& num : p) {
+		std::cout << num << ", ";
 	}
+
+	std::cout << '\n' << res << std::endl;
 
 }

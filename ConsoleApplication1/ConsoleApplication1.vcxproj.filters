@@ -18,30 +18,36 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting\MergeSort.cpp">
+    <ClCompile Include="Sorting and Searching\MergeSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting\QuickSort.cpp">
+    <ClCompile Include="Sorting and Searching\QuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting\BubbleSort.cpp">
+    <ClCompile Include="Sorting and Searching\BubbleSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting\InsertionSort.cpp">
+    <ClCompile Include="Sorting and Searching\InsertionSort.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sorting and Searching\BinarySearch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sorting\MergeSort.h">
+    <ClInclude Include="Sorting and Searching\MergeSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting\QuickSort.h">
+    <ClInclude Include="Sorting and Searching\QuickSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting\BubbleSort.h">
+    <ClInclude Include="Sorting and Searching\BubbleSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting\InsertionSort.h">
+    <ClInclude Include="Sorting and Searching\InsertionSort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorting and Searching\BinarySearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
