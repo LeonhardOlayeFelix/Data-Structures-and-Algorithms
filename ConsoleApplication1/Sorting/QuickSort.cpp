@@ -7,9 +7,9 @@ void QuickSort::sort(std::vector<int>& list)
 
 void QuickSort::partition(std::vector<int>& list, int left, int right)
 {
-	if (list.empty()) return;
+	if (list.empty()) return; //edge case
 
-	if (left == right) return; // base case
+	if (left == right) return; //base case
 
 	int boundary = left;
 
@@ -27,5 +27,5 @@ void QuickSort::partition(std::vector<int>& list, int left, int right)
 	list[right] = temp;
 
 	partition(list, left, std::max(left, boundary - 1));
-	partition(list, std::min(boundary + 1, right), right);
+	partition(list, std::min(right, boundary + 1), right);
 }
