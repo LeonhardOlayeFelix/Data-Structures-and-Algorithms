@@ -156,6 +156,7 @@
     <ClInclude Include="Sorting and Searching\BubbleSort.h" />
     <ClInclude Include="Sorting and Searching\QuickSort.h" />
     <ClInclude Include="Sorting and Searching\MergeSort.h" />
+    <ClInclude Include="Sorting and Searching\SortingIncludes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

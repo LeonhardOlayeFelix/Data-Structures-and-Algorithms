@@ -2,6 +2,7 @@
 
 void QuickSort::sort(std::vector<int>& list)
 {
+
 	partition(list, 0, list.size() - 1);
 }
 
@@ -9,7 +10,7 @@ void QuickSort::partition(std::vector<int>& list, int left, int right)
 {
 	if (list.empty()) return; //edge case
 
-	if (left == right) return; //base case
+	if (left >= right) return; //base case
 
 	int boundary = left;
 
@@ -23,9 +24,9 @@ void QuickSort::partition(std::vector<int>& list, int left, int right)
 	}
 
 	int temp = list[boundary];
-	list[boundary] = list[right];
+	list[boundary] = list[right]; //now this element is in the correct position in the list
 	list[right] = temp;
 
 	partition(list, left, std::max(left, boundary - 1));
-	partition(list, std::min(right, boundary + 1), right);
+	partition(list, std::min(boundary + 1, right), right);
 }

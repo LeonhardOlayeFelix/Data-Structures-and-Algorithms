@@ -2,6 +2,7 @@
 
 void BubbleSort::sort(std::vector<int>& list)
 {
+	
 	bool changed = true;
 
 	while (changed) {
@@ -15,4 +16,5 @@ void BubbleSort::sort(std::vector<int>& list)
 			}
 		}
 	}
+
 }
