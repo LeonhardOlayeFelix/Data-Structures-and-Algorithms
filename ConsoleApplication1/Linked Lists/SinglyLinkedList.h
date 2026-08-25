@@ -18,7 +18,8 @@ public:
 	void pop_head();
 	void pop_tail();
 	void remove(unsigned int index);
-	std::string Traverse();
+	void reverse();
+	std::string traverse() const;
 
 
 	inline const Node1* Head() const { return m_Head; }

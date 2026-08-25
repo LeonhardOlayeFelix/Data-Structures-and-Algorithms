@@ -128,7 +128,34 @@ void SinglyLinkedList::remove(unsigned int index)
 	m_Size--;
 }
 
-std::string SinglyLinkedList::Traverse()
+void SinglyLinkedList::reverse()
+{
+	if (m_Size == 0 or m_Size == 1) return;
+
+	if (m_Size == 2) {
+		Node1* temp = m_Tail;
+		m_Tail = m_Head;
+		m_Tail->Next = nullptr;
+		m_Head = temp;
+		m_Head->Next = m_Tail;
+		return;
+	}
+
+	Node1* prev = nullptr;
+	Node1* current = m_Head;
+
+	while (current != nullptr) {
+		Node1* next = current->Next;
+		current->Next = prev;
+		prev = current;
+		current = next;
+	}
+
+	m_Tail = m_Head;
+	m_Head = prev;
+}
+
+std::string SinglyLinkedList::traverse() const
 {
 	std::string result = "{";
 
