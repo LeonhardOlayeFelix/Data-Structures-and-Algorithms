@@ -139,12 +139,14 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Sorting\InsertionSort.cpp" />
     <ClCompile Include="Sorting\BubbleSort.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Sorting\QuickSort.cpp" />
     <ClCompile Include="Sorting\MergeSort.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Sorting\InsertionSort.h" />
     <ClInclude Include="Sorting\BubbleSort.h" />
     <ClInclude Include="Sorting\QuickSort.h" />
     <ClInclude Include="Sorting\MergeSort.h" />
