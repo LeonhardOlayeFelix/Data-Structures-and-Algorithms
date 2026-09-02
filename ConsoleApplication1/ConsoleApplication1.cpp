@@ -4,19 +4,30 @@
 #include <string>
 #include <ctype.h>
 #include <algorithm>
-#include "Linked Lists/SinglyLinkedList.h"
-#include "Sorting and Searching/SortingIncludes.h"
-#include "Sorting and Searching/BinarySearch.h"
+#include "Linked Lists/LinkedListIncludes.h"
+#include "Trees/TreeNode.h"
+#include "Trees/BinarySearchTree.h"
 
 int main() {
 
-	SinglyLinkedList list;
-	list.append(2);
-	list.append(3);
-	list.append(4);
-	list.append(5);
+	TreeNode* one = new TreeNode(1);
+	TreeNode* three = new TreeNode(3);
+	TreeNode* two = new TreeNode(2, one, three);
 
-	list.reverse();
+	TreeNode* five = new TreeNode(5);
+	TreeNode* seven = new TreeNode(7);
+	TreeNode* six = new TreeNode(6, five, seven);
 
-	std::cout << list.traverse();
+	TreeNode* four = new TreeNode(4, two, six);
+
+	BinarySearchTree tree;
+	tree.insert(8);
+	tree.insert(12);
+	tree.insert(3);
+	tree.insert(17);
+	tree.insert(6);
+	tree.insert(5);
+
+	tree.Root->inOrder();
+
 }

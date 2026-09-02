@@ -139,24 +139,33 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Trees\BinarySearchTree.cpp" />
+    <ClCompile Include="Linked Lists\DoublyLinkedList.cpp" />
     <ClCompile Include="Linked Lists\Node1.cpp" />
     <ClCompile Include="Linked Lists\SinglyLinkedList.cpp" />
+    <ClCompile Include="Linked Lists\Node2.cpp" />
     <ClCompile Include="Sorting and Searching\BinarySearch.cpp" />
     <ClCompile Include="Sorting and Searching\InsertionSort.cpp" />
     <ClCompile Include="Sorting and Searching\BubbleSort.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Sorting and Searching\QuickSort.cpp" />
     <ClCompile Include="Sorting and Searching\MergeSort.cpp" />
+    <ClCompile Include="Trees\TreeNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Trees\BinarySearchTree.h" />
+    <ClInclude Include="Linked Lists\DoublyLinkedList.h" />
+    <ClInclude Include="Linked Lists\LinkedListIncludes.h" />
     <ClInclude Include="Linked Lists\Node1.h" />
     <ClInclude Include="Linked Lists\SinglyLinkedList.h" />
+    <ClInclude Include="Linked Lists\Node2.h" />
     <ClInclude Include="Sorting and Searching\BinarySearch.h" />
     <ClInclude Include="Sorting and Searching\InsertionSort.h" />
     <ClInclude Include="Sorting and Searching\BubbleSort.h" />
     <ClInclude Include="Sorting and Searching\QuickSort.h" />
     <ClInclude Include="Sorting and Searching\MergeSort.h" />
     <ClInclude Include="Sorting and Searching\SortingIncludes.h" />
+    <ClInclude Include="Trees\TreeNode.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
