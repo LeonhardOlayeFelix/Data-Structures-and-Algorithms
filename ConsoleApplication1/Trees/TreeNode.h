@@ -1,6 +1,8 @@
 #pragma once
 class TreeNode
 {
+private:
+	int m_Height{ 0 };
 public:
 	TreeNode* Left;
 	TreeNode* Right;
@@ -14,10 +16,15 @@ public:
 	void inOrder();
 	void preOrder();
 	void postOrder();
+	void levelByLevel();
+	void UpdateHeight();
+	int BalanceFactor();
 
-	TreeNode* insertBST(TreeNode* node, int val);
+	TreeNode* inOrderSuccessor();
 
 	inline bool hasLeft() const { return Left != nullptr; };
 	inline bool hasRight() const { return Right != nullptr; };
+	inline bool hasChildren() const { return hasLeft() || hasRight(); };
+	inline int Height() const { return m_Height; };
 };
 

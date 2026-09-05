@@ -48,7 +48,7 @@
     <ClCompile Include="Trees\TreeNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Trees\BinarySearchTree.cpp">
+    <ClCompile Include="Trees\AVLBinarySearchTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,7 +89,10 @@
     <ClInclude Include="Trees\TreeNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Trees\BinarySearchTree.h">
+    <ClInclude Include="Trees\AVLBinarySearchTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

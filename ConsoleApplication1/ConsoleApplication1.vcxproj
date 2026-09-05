@@ -139,7 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Trees\BinarySearchTree.cpp" />
+    <ClCompile Include="Trees\AVLBinarySearchTree.cpp" />
     <ClCompile Include="Linked Lists\DoublyLinkedList.cpp" />
     <ClCompile Include="Linked Lists\Node1.cpp" />
     <ClCompile Include="Linked Lists\SinglyLinkedList.cpp" />
@@ -153,7 +153,8 @@
     <ClCompile Include="Trees\TreeNode.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Trees\BinarySearchTree.h" />
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="Trees\AVLBinarySearchTree.h" />
     <ClInclude Include="Linked Lists\DoublyLinkedList.h" />
     <ClInclude Include="Linked Lists\LinkedListIncludes.h" />
     <ClInclude Include="Linked Lists\Node1.h" />

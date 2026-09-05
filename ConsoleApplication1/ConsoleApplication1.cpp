@@ -4,9 +4,11 @@
 #include <string>
 #include <ctype.h>
 #include <algorithm>
+#include "Sorting and Searching/SortingIncludes.h"
 #include "Linked Lists/LinkedListIncludes.h"
 #include "Trees/TreeNode.h"
-#include "Trees/BinarySearchTree.h"
+#include "Trees/AVLBinarySearchTree.h"
+
 
 int main() {
 
@@ -20,14 +22,21 @@ int main() {
 
 	TreeNode* four = new TreeNode(4, two, six);
 
-	BinarySearchTree tree;
-	tree.insert(8);
-	tree.insert(12);
-	tree.insert(3);
+	AVLBinarySearchTree tree;
 	tree.insert(17);
+	tree.insert(12);
+	tree.insert(8);
 	tree.insert(6);
 	tree.insert(5);
+	tree.insert(9);
+	tree.insert(2);
+	tree.insert(1);
 
-	tree.Root->inOrder();
+	tree.remove(8);
+	tree.remove(17);
+
+	tree.Root->levelByLevel();
+
+	std::cout << "Tree Height: " << tree.Height();
 
 }
