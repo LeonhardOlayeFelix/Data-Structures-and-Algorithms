@@ -2,7 +2,7 @@
 class TreeNode
 {
 private:
-	int m_Height{ 0 };
+	int m_Height{ 1 };
 public:
 	TreeNode* Left;
 	TreeNode* Right;

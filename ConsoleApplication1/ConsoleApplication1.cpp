@@ -8,7 +8,7 @@
 #include "Linked Lists/LinkedListIncludes.h"
 #include "Trees/TreeNode.h"
 #include "Trees/AVLBinarySearchTree.h"
-
+#include "Data Structures/OrderedSet.h"
 
 int main() {
 
@@ -23,20 +23,29 @@ int main() {
 	TreeNode* four = new TreeNode(4, two, six);
 
 	AVLBinarySearchTree tree;
-	tree.insert(17);
-	tree.insert(12);
+	tree.insert(170);
+	tree.insert(120);
+	tree.insert(80);
+	tree.insert(60);
+	tree.insert(50);
+	tree.insert(90);
+	tree.insert(20);
+	tree.insert(10);
+	tree.insert(9);
 	tree.insert(8);
+	tree.insert(7);
 	tree.insert(6);
 	tree.insert(5);
-	tree.insert(9);
+	tree.insert(4);
+	tree.insert(3);
 	tree.insert(2);
 	tree.insert(1);
 
-	tree.remove(8);
-	tree.remove(17);
+	//tree.Root->inOrder();
 
-	tree.Root->levelByLevel();
+	for (auto node : tree) {
+		std::cout << node->Value << ", ";
+	}
 
-	std::cout << "Tree Height: " << tree.Height();
 
 }

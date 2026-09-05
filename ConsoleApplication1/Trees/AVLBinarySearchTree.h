@@ -1,8 +1,26 @@
 #pragma once
 #include "TreeNode.h"
+#include <stack>
 
 class AVLBinarySearchTree
 {
+public:
+	class Iterator {
+	public:
+		Iterator(TreeNode* root);
+
+		TreeNode* operator*() const;
+		Iterator& operator++();
+		bool operator!=(const Iterator& other) const;
+		bool operator==(const Iterator& other) const;
+
+	private:
+		std::stack<TreeNode*> m_Stack{};
+
+		void pushLeftTree(TreeNode* node);
+	};
+
+
 public:
 	TreeNode* Root{ nullptr };
 
@@ -12,6 +30,9 @@ public:
 
 	void insert(int val);
 	void remove(int val);
+	Iterator begin();
+	Iterator end();
+	TreeNode* find(int val);
 
 	inline int Height() const { return Root->Height(); };
 	inline int BalanceFactor() const { return Root->BalanceFactor(); };

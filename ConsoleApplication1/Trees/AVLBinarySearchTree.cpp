@@ -12,6 +12,21 @@ void AVLBinarySearchTree::remove(int val)
 	Root = removeRecursive(Root, val);
 }
 
+AVLBinarySearchTree::Iterator AVLBinarySearchTree::begin()
+{
+	return Iterator(Root);
+}
+
+AVLBinarySearchTree::Iterator AVLBinarySearchTree::end()
+{
+	return Iterator(nullptr);
+}
+
+TreeNode* AVLBinarySearchTree::find(int val)
+{
+	return findRecursive(Root, val);
+}
+
 TreeNode* AVLBinarySearchTree::insertRecursive(TreeNode * node, int val)
 {
 	if (node == nullptr) 
@@ -146,4 +161,58 @@ TreeNode* AVLBinarySearchTree::rotateRight(TreeNode* node)
 	newRoot->UpdateHeight();
 
 	return newRoot;
+}
+
+AVLBinarySearchTree::Iterator::Iterator(TreeNode* root)
+{
+	pushLeftTree(root);
+}
+
+TreeNode* AVLBinarySearchTree::Iterator::operator*() const
+{
+	return m_Stack.top();
+}
+
+AVLBinarySearchTree::Iterator& AVLBinarySearchTree::Iterator::operator++()
+{
+	TreeNode* curr = m_Stack.top();
+	m_Stack.pop();
+
+	if (curr->Right) {
+		pushLeftTree(curr->Right);
+	}
+
+	return *this;
+}
+
+bool AVLBinarySearchTree::Iterator::operator!=(const Iterator& other) const
+{
+	if (m_Stack.empty() && other.m_Stack.empty()) return false;
+
+	if (!m_Stack.empty() && !other.m_Stack.empty()) return m_Stack.top() != other.m_Stack.top();
+
+	return true;
+}
+
+bool AVLBinarySearchTree::Iterator::operator==(const Iterator& other) const
+{
+	if (m_Stack.empty() && other.m_Stack.empty()) return true;
+
+	if (!m_Stack.empty() && !other.m_Stack.empty()) return m_Stack.top() == other.m_Stack.top();
+
+	return false;
+}
+
+void AVLBinarySearchTree::Iterator::pushLeftTree(TreeNode* node)
+{
+	if (node == nullptr) return;
+
+	m_Stack.push(node);
+
+	TreeNode* curr = node->Left;
+
+	while (curr != nullptr) {
+		m_Stack.push(curr);
+		curr = curr->Left;
+	}
 }
