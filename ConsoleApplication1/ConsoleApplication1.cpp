@@ -12,16 +12,6 @@
 
 int main() {
 
-	TreeNode* one = new TreeNode(1);
-	TreeNode* three = new TreeNode(3);
-	TreeNode* two = new TreeNode(2, one, three);
-
-	TreeNode* five = new TreeNode(5);
-	TreeNode* seven = new TreeNode(7);
-	TreeNode* six = new TreeNode(6, five, seven);
-
-	TreeNode* four = new TreeNode(4, two, six);
-
 	OrderedSet set;
 	set.insert(80);
 	set.insert(50);
@@ -35,6 +25,7 @@ int main() {
 	set.insert(6);
 	set.insert(5);
 	set.insert(10);
+	set.insert(10);
 	set.insert(3);
 	set.insert(120);
 	set.insert(2);
@@ -44,5 +35,9 @@ int main() {
 	for (auto elem : set) {
 		std::cout << elem << ", ";
 	}
+
+	//set.Root->levelByLevel();
+
+	std::cout << "\n" << set.upperBound(20);
 
 }

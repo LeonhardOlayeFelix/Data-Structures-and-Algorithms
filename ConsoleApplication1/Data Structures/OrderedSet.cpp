@@ -32,6 +32,13 @@ bool OrderedSet::contains(int val)
 	return m_Tree.find(val) != nullptr;
 }
 
+int OrderedSet::lowerBound(int val) {
+	return m_Tree.lowerBound(val)->Value;
+}
+int OrderedSet::upperBound(int val) {
+	return m_Tree.upperBound(val)->Value;
+}
+
 OrderedSet::Iterator OrderedSet::begin()
 {
 	return Iterator(m_Tree.begin());

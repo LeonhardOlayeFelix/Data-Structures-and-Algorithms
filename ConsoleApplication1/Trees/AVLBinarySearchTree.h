@@ -33,6 +33,8 @@ public:
 	Iterator begin();
 	Iterator end();
 	TreeNode* find(int val);
+	TreeNode* lowerBound(int val) const;
+	TreeNode* upperBound(int val) const;
 
 	inline int Height() const { return Root->Height(); };
 	inline int BalanceFactor() const { return Root->BalanceFactor(); };

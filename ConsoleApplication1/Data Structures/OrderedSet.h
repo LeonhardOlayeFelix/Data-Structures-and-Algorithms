@@ -26,6 +26,8 @@ public:
 	void insert(int val);
 	void remove(int val);
 	bool contains(int val);
+	int lowerBound(int val);
+	int upperBound(int val);
 	Iterator begin();
 	Iterator end();
 

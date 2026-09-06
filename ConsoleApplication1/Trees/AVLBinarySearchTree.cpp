@@ -27,6 +27,45 @@ TreeNode* AVLBinarySearchTree::find(int val)
 	return findRecursive(Root, val);
 }
 
+TreeNode* AVLBinarySearchTree::lowerBound(int val) const
+{
+	TreeNode* curr = Root;
+	TreeNode* best = nullptr;
+
+	while (curr != nullptr) {
+
+		if (curr->Value == val) return curr;
+
+		if (curr->Value < val)
+			curr = curr->Right;
+
+		else {
+			best = curr;
+			curr = curr->Left;
+		}
+	}
+
+	return best;
+}
+
+TreeNode* AVLBinarySearchTree::upperBound(int val) const
+{
+	TreeNode* curr = Root;
+	TreeNode* best = nullptr;
+
+	while (curr != nullptr) {
+		if (curr->Value <= val)
+			curr = curr->Right;
+
+		else {
+			best = curr;
+			curr = curr->Left;
+		}
+	}
+
+	return best;
+}
+
 TreeNode* AVLBinarySearchTree::insertRecursive(TreeNode * node, int val)
 {
 	if (node == nullptr) 
