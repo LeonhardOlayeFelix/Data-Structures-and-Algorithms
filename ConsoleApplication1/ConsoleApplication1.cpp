@@ -28,9 +28,10 @@ int main() {
 		{8, 9} 
 	};
 
-	DirectedGraph graph(10, connections);
+	UndirectedGraph graph(10, connections);
 
 	graph.Bfs(0);
 	graph.Dfs(0);
 	graph.DfsRecursive(0);
+	std::cout << graph.ContainsCycle();
 }
