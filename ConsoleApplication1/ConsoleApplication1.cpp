@@ -15,8 +15,6 @@
 
 int main() {
 
-	int n = 10;
-
 	std::vector<std::pair<int, int>> connections = 
 	{	{0, 1}, {0, 2}, {0, 3},
 		{1, 5}, 
@@ -30,16 +28,14 @@ int main() {
 
 	std::vector<std::pair<int, int>> connections2 =
 	{
-		{0, 1}, {0, 4},
+		{0, 1},
 		{1, 2},
 		{2, 3},
-		{3, 1},
+		{4, 0}
 	};
 
 	DirectedGraph graph(6, connections2);
 
-	graph.Bfs(0);
-
-	std::cout << graph.ContainsCycle();
+	graph.TopologicalSort();
 
 }
