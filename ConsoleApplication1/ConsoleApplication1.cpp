@@ -28,10 +28,18 @@ int main() {
 		{8, 9} 
 	};
 
-	UndirectedGraph graph(10, connections);
+	std::vector<std::pair<int, int>> connections2 =
+	{
+		{0, 1}, {0, 4},
+		{1, 2},
+		{2, 3},
+		{3, 1},
+	};
+
+	DirectedGraph graph(6, connections2);
 
 	graph.Bfs(0);
-	graph.Dfs(0);
-	graph.DfsRecursive(0);
+
 	std::cout << graph.ContainsCycle();
+
 }

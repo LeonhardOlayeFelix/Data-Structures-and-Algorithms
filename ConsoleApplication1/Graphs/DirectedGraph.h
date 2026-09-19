@@ -12,5 +12,9 @@ public:
 	bool ContainsCycle() override;
 
 	void TopologicalSort();
+
+private:
+	bool containsCycle(int node, std::vector<bool>& beingVisited, std::vector<bool>& fullyVisited);
+
 };
 
