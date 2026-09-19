@@ -19,15 +19,15 @@ void UndirectedGraph::AddEdge(const std::pair<int, int>& edge)
 
 bool UndirectedGraph::ContainsCycle()
 {
-	std::unordered_set<int> visited;
+	std::vector<bool> visited(m_AdjacencyList.size(), false);
 
 	for (int i = 0; i < m_AdjacencyList.size(); i++) {
 
-		if (visited.find(i) != visited.end()) continue;
+		if (visited[i]) continue;
 
 		std::stack<std::pair<int, int>> s;
 		s.push({ i, -1 });
-		visited.insert(i);
+		visited[i] = true;
 
 		while (!s.empty()) {
 			auto [current, parent] = s.top();
@@ -35,22 +35,20 @@ bool UndirectedGraph::ContainsCycle()
 
 			for (const int& neighbor : m_AdjacencyList[current])
 			{
-				if (visited.find(neighbor) != visited.end())
+				if (visited[neighbor])
 				{
 					if (parent != neighbor)
 						return true;
 				}
 				else
 				{
-					visited.insert(neighbor);
+					visited[neighbor] = true;
 					s.push({ neighbor, current });
 				}
 			}
 		}
 
 	}
-
-	
 
 	return false;
 }

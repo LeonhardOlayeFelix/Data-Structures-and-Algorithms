@@ -6,8 +6,8 @@
 
 void TraversableGraph::Bfs(int start)
 {
-	std::unordered_set<int> visited;
-	visited.insert(start);
+	std::vector<bool> visited(m_AdjacencyList.size(), false);
+	visited[start] = true;
 
 	std::queue<int> q;
 	q.push(start);
@@ -21,8 +21,8 @@ void TraversableGraph::Bfs(int start)
 		std::cout << current;
 
 		for (const int& neighbor : m_AdjacencyList[current]) {
-			if (visited.find(neighbor) == visited.end()) {
-				visited.insert(neighbor);
+			if (!visited[neighbor]) {
+				visited[neighbor] = true;
 				q.push(neighbor);
 			}
 		}
@@ -35,11 +35,12 @@ void TraversableGraph::Bfs(int start)
 
 void TraversableGraph::Dfs(int start)
 {
+
+	std::vector<bool> visited(m_AdjacencyList.size(), false);
+	visited[start] = true;
+
 	std::stack<int> s;
 	s.push(start);
-
-	std::unordered_set<int> visited;
-	visited.insert(start);
 
 	std::cout << '{';
 
@@ -50,8 +51,8 @@ void TraversableGraph::Dfs(int start)
 		std::cout << current;
 
 		for (const int& neighbor : m_AdjacencyList[current]) {
-			if (visited.find(neighbor) == visited.end()) {
-				visited.insert(neighbor);
+			if (!visited[neighbor]) {
+				visited[neighbor] = true;
 				s.push(neighbor);
 			}
 		}
@@ -65,7 +66,7 @@ void TraversableGraph::Dfs(int start)
 
 void TraversableGraph::DfsRecursive(int start)
 {
-	std::unordered_set<int> visited;
+	std::vector<bool> visited(m_AdjacencyList.size());
 
 	std::cout << '{';
 	dfsHelper(start, visited);
@@ -73,13 +74,13 @@ void TraversableGraph::DfsRecursive(int start)
 
 }
 
-void TraversableGraph::dfsHelper(int node, std::unordered_set<int>& visited)
+void TraversableGraph::dfsHelper(int node, std::vector<bool>& visited)
 {
 	std::cout << node << ", ";
 
-	visited.insert(node);
+	visited[node] = true;
 
 	for (const int& neighbor : m_AdjacencyList[node])
-		if (visited.find(neighbor) == visited.end())
+		if (!visited[neighbor])
 			dfsHelper(neighbor, visited);
 }

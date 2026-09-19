@@ -11,6 +11,6 @@ public:
 	void Dfs(int start) override;
 	void DfsRecursive(int start) override;
 private:
-	void dfsHelper(int node, std::unordered_set<int>& visited);
+	void dfsHelper(int node, std::vector<bool>& visited);
 };
 
