@@ -212,8 +212,6 @@ TreeNode* AVLBinarySearchTree::Iterator::operator*() const
 	return m_Stack.top();
 }
 
-
-
 AVLBinarySearchTree::Iterator& AVLBinarySearchTree::Iterator::operator++()
 {
 	TreeNode* curr = m_Stack.top();

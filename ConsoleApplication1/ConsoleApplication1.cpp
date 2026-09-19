@@ -16,7 +16,8 @@
 int main() {
 
 	std::vector<std::pair<int, int>> connections = 
-	{	{0, 1}, {0, 2}, {0, 3},
+	{	
+		{0, 1}, {0, 2}, {3, 0},
 		{1, 5}, 
 		{2, 8}, 
 		{3, 7}, {3, 8},
@@ -34,8 +35,10 @@ int main() {
 		{4, 0}
 	};
 
-	DirectedGraph graph(6, connections2);
+	DirectedGraph graph2(10, connections);
 
-	graph.TopologicalSort();
+	for (int node : graph2) {
+		std::cout << node << ", ";
+	}
 
 }

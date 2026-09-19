@@ -35,7 +35,6 @@ void TraversableGraph::Bfs(int start)
 
 void TraversableGraph::Dfs(int start)
 {
-
 	std::vector<bool> visited(m_AdjacencyList.size(), false);
 	visited[start] = true;
 
@@ -61,7 +60,6 @@ void TraversableGraph::Dfs(int start)
 	}
 
 	std::cout << '}' << std::endl;
-
 }
 
 void TraversableGraph::DfsRecursive(int start)
@@ -83,4 +81,63 @@ void TraversableGraph::dfsHelper(int node, std::vector<bool>& visited)
 	for (const int& neighbor : m_AdjacencyList[node])
 		if (!visited[neighbor])
 			dfsHelper(neighbor, visited);
+}
+
+TraversableGraph::BFSIterator TraversableGraph::begin()
+{
+	return BFSIterator(0, m_AdjacencyList);
+}
+
+TraversableGraph::BFSIterator TraversableGraph::end()
+{
+	return BFSIterator();
+}
+
+TraversableGraph::BFSIterator::BFSIterator(int node, const std::vector<std::vector<int>>& adj) : m_Adj(adj)
+{
+	m_Visited.resize(adj.size(), false);
+	m_Visited[node] = true;
+	m_Queue.push(node);
+}
+
+TraversableGraph::BFSIterator::BFSIterator()
+{
+
+}
+
+TraversableGraph::BFSIterator& TraversableGraph::BFSIterator::operator++()
+{
+	int node = m_Queue.front();
+	m_Queue.pop();
+
+	pushNeighbors(node);
+
+	return *this;
+}
+
+int TraversableGraph::BFSIterator::operator*()
+{
+	return m_Queue.front();
+}
+
+bool TraversableGraph::BFSIterator::operator!=(const BFSIterator& other)
+{
+	return m_Queue.empty() != other.m_Queue.empty();
+}
+
+bool TraversableGraph::BFSIterator::operator==(const BFSIterator& other)
+{
+	return m_Queue.empty() == other.m_Queue.empty();
+}
+
+void TraversableGraph::BFSIterator::pushNeighbors(int node)
+{
+	for (int neighbor : m_Adj[node]) 
+	{
+		if (!m_Visited[neighbor]) 
+		{
+			m_Queue.push(neighbor);
+			m_Visited[neighbor] = true;
+		}
+	}
 }

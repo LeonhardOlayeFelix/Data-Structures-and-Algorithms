@@ -10,7 +10,6 @@ public:
 
 	void AddEdge(const std::pair<int, int>& edge) override;
 	bool ContainsCycle() override;
-
 	void TopologicalSort();
 
 private:
