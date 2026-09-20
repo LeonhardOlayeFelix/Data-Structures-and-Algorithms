@@ -5,12 +5,7 @@
 #include <ctype.h>
 #include <algorithm>
 #include <utility>
-#include "Sorting and Searching/SortingIncludes.h"
-#include "Linked Lists/LinkedListIncludes.h"
-#include "Trees/TreeNode.h"
-#include "Trees/AVLBinarySearchTree.h"
-#include "Data Structures/OrderedSet.h"
-#include "Graphs/Includes.h"
+#include "Data Structures/Heaps/MinHeap.h"
 
 
 int main() {
@@ -35,10 +30,17 @@ int main() {
 		{4, 0}
 	};
 
-	DirectedGraph graph2(10, connections);
+	//DirectedGraph graph2(10, connections);
 
-	for (int node : graph2) {
-		std::cout << node << ", ";
-	}
+	//for (int node : graph2) {
+	//	std::cout << node << ", ";
+	//}
+
+	MinHeap heap;
+
+	heap.Heapify({5, 7, 3, 8, 9, 10, 12, 5, 6});
+
+	heap.PopAndPrint();
+
 
 }

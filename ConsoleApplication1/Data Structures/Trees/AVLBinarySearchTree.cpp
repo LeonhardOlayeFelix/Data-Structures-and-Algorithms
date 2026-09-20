@@ -1,5 +1,5 @@
 #include "AVLBinarySearchTree.h"
-#include "../debug.h"
+#include "../../debug.h"
 #include <iostream>
 
 void AVLBinarySearchTree::insert(int val)

@@ -18,111 +18,129 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting and Searching\MergeSort.cpp">
+    <ClCompile Include="Data Structures\Sorting and Searching\MergeSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting and Searching\QuickSort.cpp">
+    <ClCompile Include="Data Structures\Sorting and Searching\QuickSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting and Searching\BubbleSort.cpp">
+    <ClCompile Include="Data Structures\Sorting and Searching\BubbleSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting and Searching\InsertionSort.cpp">
+    <ClCompile Include="Data Structures\Sorting and Searching\InsertionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Sorting and Searching\BinarySearch.cpp">
+    <ClCompile Include="Data Structures\Sorting and Searching\BinarySearch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Linked Lists\Node1.cpp">
+    <ClCompile Include="Data Structures\Linked Lists\Node1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Linked Lists\SinglyLinkedList.cpp">
+    <ClCompile Include="Data Structures\Linked Lists\SinglyLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Linked Lists\Node2.cpp">
+    <ClCompile Include="Data Structures\Linked Lists\Node2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Linked Lists\DoublyLinkedList.cpp">
+    <ClCompile Include="Data Structures\Linked Lists\DoublyLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Trees\TreeNode.cpp">
+    <ClCompile Include="Data Structures\Trees\TreeNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Trees\AVLBinarySearchTree.cpp">
+    <ClCompile Include="Data Structures\Trees\AVLBinarySearchTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Data Structures\OrderedSet.cpp">
+    <ClCompile Include="Abstract Data Types\OrderedSet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphs\UndirectedGraph.cpp">
+    <ClCompile Include="Data Structures\Graphs\UndirectedGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphs\DirectedGraph.cpp">
+    <ClCompile Include="Data Structures\Graphs\DirectedGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphs\TraversableGraph.cpp">
+    <ClCompile Include="Data Structures\Graphs\TraversableGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Structures\Heaps\Heap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Structures\Heaps\MaxHeap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Data Structures\Heaps\MinHeap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sorting and Searching\MergeSort.h">
+    <ClInclude Include="Data Structures\Sorting and Searching\MergeSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting and Searching\QuickSort.h">
+    <ClInclude Include="Data Structures\Sorting and Searching\QuickSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting and Searching\BubbleSort.h">
+    <ClInclude Include="Data Structures\Sorting and Searching\BubbleSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting and Searching\InsertionSort.h">
+    <ClInclude Include="Data Structures\Sorting and Searching\InsertionSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting and Searching\BinarySearch.h">
+    <ClInclude Include="Data Structures\Sorting and Searching\BinarySearch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linked Lists\Node1.h">
+    <ClInclude Include="Data Structures\Linked Lists\Node1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linked Lists\SinglyLinkedList.h">
+    <ClInclude Include="Data Structures\Linked Lists\SinglyLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Sorting and Searching\SortingIncludes.h">
+    <ClInclude Include="Data Structures\Sorting and Searching\SortingIncludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linked Lists\Node2.h">
+    <ClInclude Include="Data Structures\Linked Lists\Node2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linked Lists\DoublyLinkedList.h">
+    <ClInclude Include="Data Structures\Linked Lists\DoublyLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Linked Lists\LinkedListIncludes.h">
+    <ClInclude Include="Data Structures\Linked Lists\LinkedListIncludes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Trees\TreeNode.h">
+    <ClInclude Include="Data Structures\Trees\TreeNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Trees\AVLBinarySearchTree.h">
+    <ClInclude Include="Data Structures\Trees\AVLBinarySearchTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Data Structures\OrderedSet.h">
+    <ClInclude Include="Abstract Data Types\OrderedSet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphs\Graph.h">
+    <ClInclude Include="Data Structures\Graphs\Graph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphs\UndirectedGraph.h">
+    <ClInclude Include="Data Structures\Graphs\UndirectedGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphs\DirectedGraph.h">
+    <ClInclude Include="Data Structures\Graphs\DirectedGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphs\TraversableGraph.h">
+    <ClInclude Include="Data Structures\Graphs\TraversableGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphs\Includes.h">
+    <ClInclude Include="Data Structures\Graphs\Includes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Structures\Heaps\Heap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Structures\Heaps\MaxHeap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Data Structures\Heaps\MinHeap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

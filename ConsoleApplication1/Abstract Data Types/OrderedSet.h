@@ -1,5 +1,5 @@
 #pragma once
-#include "../Trees/AVLBinarySearchTree.h"
+#include "../Data Structures/Trees/AVLBinarySearchTree.h"
 
 class OrderedSet
 {
