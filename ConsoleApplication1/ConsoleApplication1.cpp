@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <utility>
 #include "Data Structures/Heaps/MinHeap.h"
-
+#include "Abstract Data Types/PriorityQueue.h"
 
 int main() {
 
@@ -30,17 +30,8 @@ int main() {
 		{4, 0}
 	};
 
-	//DirectedGraph graph2(10, connections);
+	PriorityQueue<MinHeap> q({ 5, 7, 3, 8, 9, 10, 12, 5, 6 });
 
-	//for (int node : graph2) {
-	//	std::cout << node << ", ";
-	//}
-
-	MinHeap heap;
-
-	heap.Heapify({5, 7, 3, 8, 9, 10, 12, 5, 6});
-
-	heap.PopAndPrint();
-
+	std::cout << q.Front();
 
 }

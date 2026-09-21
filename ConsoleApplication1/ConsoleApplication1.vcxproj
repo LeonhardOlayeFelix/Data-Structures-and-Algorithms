@@ -158,8 +158,11 @@
     <ClCompile Include="Data Structures\Heaps\Heap.cpp" />
     <ClCompile Include="Data Structures\Heaps\MaxHeap.cpp" />
     <ClCompile Include="Data Structures\Heaps\MinHeap.cpp" />
+    <ClCompile Include="Abstract Data Types\PriorityQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Abstract Data Types\Includes.h" />
+    <ClInclude Include="Data Structures\Heaps\Includes.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="Abstract Data Types\OrderedSet.h" />
     <ClInclude Include="Data Structures\Graphs\DirectedGraph.h" />
@@ -183,6 +186,7 @@
     <ClInclude Include="Data Structures\Heaps\Heap.h" />
     <ClInclude Include="Data Structures\Heaps\MaxHeap.h" />
     <ClInclude Include="Data Structures\Heaps\MinHeap.h" />
+    <ClInclude Include="Abstract Data Types\PriorityQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
